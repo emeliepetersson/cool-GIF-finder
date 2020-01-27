@@ -1,0 +1,38 @@
+@import-normalize;
+
+@import 'node_modules/sanitize.css/sanitize';
+
+// Project specific styles.
+@import 'project/__project';
+@import 'components/__components';
+
+.header {
+  padding-top: 30px;
+  width: 80%;
+
+  @include center();
+
+  &__logo {
+    display: block;
+    width: 70%;
+
+    @include center();
+  }
+}
+
+.giphy {
+  width: 80%;
+
+  @include center();
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: $primary;
+    text-decoration: none;
+  }
+}
