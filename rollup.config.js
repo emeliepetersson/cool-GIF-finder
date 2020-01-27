@@ -1,6 +1,7 @@
-const browsersync = require("rollup-plugin-browsersync");
+import browsersync from "rollup-plugin-browsersync";
 import { terser } from "rollup-plugin-terser"; //med måsvingarna kan man hämta ut en specifik variabel från pluginet
 import postcss from "rollup-plugin-postcss";
+
 const postcssNormalize = require("postcss-normalize");
 const autoprefixer = require("autoprefixer");
 const cssNano = require("cssnano");
