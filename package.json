@@ -19,16 +19,24 @@
   },
   "homepage": "https://github.com/emeliepetersson/cool-GIF-finder#readme",
   "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-browsersync": "^1.1.0",
     "rollup-plugin-terser": "^5.2.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.8.3",
     "autoprefixer": "^9.7.4",
     "browserslist": "^4.8.4",
     "cssnano": "^4.1.10",
     "node-sass": "^4.13.1",
     "postcss-normalize": "^8.0.1",
     "rollup": "^1.29.0",
+    "rollup-plugin-filesize": "^6.2.1",
     "rollup-plugin-postcss": "^2.0.3",
     "stylelint": "^13.0.0",
     "stylelint-config-standard": "^19.0.0",
@@ -48,7 +56,13 @@
       "at-rule-no-unknown": false,
       "indentation": "tab",
       "number-leading-zero": null,
-      "unit-whitelist": ["em", "rem", "s", "%", "px"]
+      "unit-whitelist": [
+        "em",
+        "rem",
+        "s",
+        "%",
+        "px"
+      ]
     }
   }
 }
