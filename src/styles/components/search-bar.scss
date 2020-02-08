@@ -1,26 +1,32 @@
 .search {
   display: flex;
-  width: 60%;
-
-  @include center();
-
-  &__field {
-    width: 100%;
-    border: 2px solid rgb(144, 25, 180);
-    height: 40px;
-    padding-left: 10px;
-    font-size: 17px;
-    color: #999898;
+  margin-bottom: 20px;
 }
 
-  &__button {
-    all: unset;
-    width: 40px;
-    height: 40px;
+.search__button {
+  background-image: url(./../images/search.gif);
+  border: none;
+  background-size: 52px;
+  cursor: pointer;
+  height: 52px;
+  width: 52px;
+}
 
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
+.search__field {
+  animation-delay: 3;
+  animation-direction: alternate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: border-color-wave;
+  animation-timing-function: linear;
+  font-size: 16px;
+  border-right: none;
+  border: 2px solid $color-purple;
+  padding: 10px;
+  width: calc(100% - 52px);
+}
+
+@keyframes border-color-wave {
+  from { border-color: $color-purple; }
+  to { border-color: $color-pink; }
 }

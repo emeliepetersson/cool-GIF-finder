@@ -1,0 +1,19 @@
+body {
+  color: $color-dark;
+  font-family: $font-primary;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+a {
+  border-bottom: 1px solid $color-purple;
+  color: $color-purple;
+  text-decoration: none;
+  transition: all 150ms ease;
+
+  &:hover {
+    background: $color-purple;
+    border-color: transparent;
+    color: $color-light;
+  }
+}

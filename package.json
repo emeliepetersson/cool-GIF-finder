@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup --config --environment NODE_ENV:production",
+    "deploy": "npm run build && gh-pages -d public",
     "start": "rollup --config --watch",
-    "test": "stylelint 'src/styles/**/*.scss'"
+    "test": "stylelint 'src/styles/**/*.scss' && semistandard --verbose | snazzy"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emeliepetersson/cool-GIF-finder.git"
   },
-  "author": "",
+  "author": "Emelie Petersson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/emeliepetersson/cool-GIF-finder/issues"
@@ -24,6 +25,7 @@
     "@babel/preset-env": "^7.8.3",
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
+    "gh-pages": "^2.2.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-browsersync": "^1.1.0",
     "rollup-plugin-terser": "^5.2.0"
@@ -37,7 +39,10 @@
     "postcss-normalize": "^8.0.1",
     "rollup": "^1.29.0",
     "rollup-plugin-filesize": "^6.2.1",
+    "rollup-plugin-inject-env": "^0.1.0",
     "rollup-plugin-postcss": "^2.0.3",
+    "semistandard": "^14.2.0",
+    "snazzy": "^8.0.0",
     "stylelint": "^13.0.0",
     "stylelint-config-standard": "^19.0.0",
     "stylelint-scss": "^3.13.0"
@@ -54,7 +59,7 @@
     "extends": "stylelint-config-standard",
     "rules": {
       "at-rule-no-unknown": false,
-      "indentation": "tab",
+      "indentation": "space",
       "number-leading-zero": null,
       "unit-whitelist": [
         "em",
